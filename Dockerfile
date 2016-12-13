@@ -26,7 +26,7 @@ RUN cd /root/mxnet/python && python setup.py install
 # Add R to apt sources
 RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" >> /etc/apt/sources.list
 # Install latest version of R
-RUN apt-get install -y --force-yes r-base
+RUN apt-get update && apt-get install -y --force-yes r-base
 
 # install EBImage
 RUN sudo apt-get install -y libfftw3-dev
